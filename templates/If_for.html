@@ -1,0 +1,22 @@
+{% extends "Padre.html" %}
+
+{% block h1_header %}
+Probando
+{% endblock h1_header %}
+{% block h2_header %}
+Prueba con exito
+{% endblock h2_header %}
+
+{% block main %}
+   <ul>
+        {% for num in numeros  %}
+             {% if num > 252  %}
+            <li style="color:blue">pepito {{num}}</li>
+            {% else %}
+            <li style="color:red">pepito {{num}}</li>
+            {% endif %}
+         {% endfor %}
+    </ul>
+
+{% endblock main %}
+    
