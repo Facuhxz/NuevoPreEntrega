@@ -12,7 +12,8 @@ from AppsDePag.forms import FormularioMother
 def inicio(request):
     # return HttpResponse("Bienvenidos a mi INICIO!")
     
-    return render(request, "AppsDePag/index.html")
+    # return render(request, "AppsDePag/index.html")
+    return render(request, "Padre.html")
 
 
 def template4(request, nombre, apellido, edad):
