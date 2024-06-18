@@ -1,14 +1,15 @@
 from django.db import models
 
 
-class MotherBoard(models.Model):
-    modelo = models.CharField(max_length=25)
-    marca = models.CharField(max_length=25)
+# IGNORAR ESTE MODEL, SE USO PARA PRUEBA
+# class MotherBoard(models.Model):
+#     modelo = models.CharField(max_length=25)
+#     marca = models.CharField(max_length=25)
     
-    def __str__(self):
-        return f"Mother {self.marca} {self.modelo}"
+#     def __str__(self):
+#         return f"Mother {self.marca} {self.modelo}"
         
-
+# MODEL UTILIZADO PARA LA PAG FINAL
 class PcArmada(models.Model):
     mother = models.CharField(max_length=50)
     ram = models.CharField(max_length=50)

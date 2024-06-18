@@ -1,6 +1,7 @@
 from django import forms
 # from AppsDePag.models import 
 
+# FORMULARIO UTILIZADO PARA ARMAR LA PC
 class FormularioPc(forms.Form):
     mother = forms.CharField(max_length=50)
     ram = forms.CharField(max_length=50)

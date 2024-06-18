@@ -5,11 +5,11 @@ from AppsDePag.models import PcArmada
 from AppsDePag.forms import FormularioPc
 
 
-
+# ESTE CODIGO UTILIZAMOS PARA IR A NUESTRO INICIO
 def inicio(request):
     return render(request, "AppsDePag/index.html")
 
-
+# ESTE CODIGO UTILIZAMOS PARA ARMAR NUESTRA PC
 def ArmarPc(request):
     
     formulario = FormularioPc() 
@@ -26,6 +26,7 @@ def ArmarPc(request):
      
     return render(request, "AppsDePag/Arma_tu_pc.html", {"formulario": formulario})
 
+# ESTE CODIGO UTILIZAMOS PARA CREAR LA LISTA DE PC ARMADAS
 def PcArmadas(request):
     
     PcArmadas = PcArmada.objects.all()
