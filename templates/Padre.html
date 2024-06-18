@@ -8,10 +8,10 @@
         <meta name="author" content="" />
         <title>
             {% block title_head %}
-            Inicio
+           HXZ Gamers
             {% endblock title_head %}
         </title>
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href={% static "assets/favicon.ico" %} />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
@@ -28,7 +28,8 @@
                 {% comment %} v1 {% endcomment %}
                 {% comment %} <a class="navbar-brand" href={% url "crear" "b550-m" "msi" %}>Crear Mother</a> {% endcomment %}
                  {% comment %} v2 {% endcomment %}
-                <a class="navbar-brand" href={% url "crearV2" %}>Crear Mother</a>
+                <a class="navbar-brand" href={% url "ArmarPc" %}>Arma tu PC</a>
+                <a class="navbar-brand" href={% url "Pc Armadas" %}>Pc Armadas</a>
                 {% comment %} <a class="navbar-brand" href={% url "Prueba2" "Ricardo" "Fort" "44" %}>Probando</a> {% endcomment %}
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
@@ -50,13 +51,15 @@
                     <div class="text-center">
                         <h1 class="mx-auto my-0 text-uppercase">
                             {% block h1_header %}
+                            HXZ GAMERS
                             {% endblock h1_header %}
                         </h1>
                         <h2 class="text-white-50 mx-auto mt-2 mb-5">
                             {% block h2_header %}
+                            TU PAGINA FAVORITA EN ARMADOS DE PC
                             {% endblock h2_header %}
                         </h2>
-                        <a class="btn btn-primary" href="#about">Get Started</a>
+                        <a class="btn btn-primary" href="#about">Arma Tu Pc Aqui</a>
                     </div>
                 </div>
             </div>
@@ -69,15 +72,14 @@
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8">
-                        <h2 class="text-white mb-4">Built with Bootstrap 5</h2>
+                        <h2 class="text-white mb-4">Arma tu pc con HXZ GAMERS</h2>
                         <p class="text-white-50">
-                            Grayscale is a free Bootstrap theme created by Start Bootstrap. It can be yours right now, simply download the template on
-                            <a href="https://startbootstrap.com/theme/grayscale/">the preview page.</a>
-                            The theme is open source, and you can use it for any purpose, personal or commercial.
+                            Arma la pc de tus sueños en nustra pagina haciendo click en el siguiente enlace
+                            <a href="http://127.0.0.1:8000/arma/tu/pc">ARMA TU PC.</a>
                         </p>
                     </div>
                 </div>
-                <img class="img-fluid" src={% static "assets/img/ipad.png" %} alt="..." />
+                <img class="img-fluid" src={% static "assets/img/Setup-gamer.jpg" %} alt="..." />
             </div>
         </section>
         <!-- Projects-->
@@ -85,23 +87,23 @@
             <div class="container px-4 px-lg-5">
                 <!-- Featured Project Row-->
                 <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
-                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src={% static "assets/img/bg-masthead.jpg" %} alt="..." /></div>
+                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src={% static "assets/img/Acerca-de-nosotros.jpg" %} alt="..." /></div>
                     <div class="col-xl-4 col-lg-5">
                         <div class="featured-text text-center text-lg-left">
-                            <h4>Shoreline</h4>
-                            <p class="text-black-50 mb-0">Grayscale is open source and MIT licensed. This means you can use it for any project - even commercial projects! Download it, customize it, and publish your website!</p>
+                            <h4>Acerca de nosotros</h4>
+                            <p class="text-black-50 mb-0">HXZ GAMERS es una pagina equipada con todo lo que necesitas para armar tu pc perfecta. Contamos con el mas amplio stock y calidad del mercado</p>
                         </div>
                     </div>
                 </div>
                 <!-- Project One Row-->
                 <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
-                    <div class="col-lg-6"><img class="img-fluid" src={% static "assets/img/demo-image-01.jpg" %} alt="..." /></div>
+                    <div class="col-lg-6"><img class="img-fluid" src={% static "assets/img/computadora-de-escritorio-gamer.jpg" %} alt="..." /></div>
                     <div class="col-lg-6">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
                                 <div class="project-text w-100 my-auto text-center text-lg-left">
-                                    <h4 class="text-white">Misty</h4>
-                                    <p class="mb-0 text-white-50">An example of where you can put an image of a project, or anything else, along with a description.</p>
+                                    <h4 class="text-white">Depredador</h4>
+                                    <p class="mb-0 text-white-50">DEPREDADOR es la pc mas potente que armamos al dia de la fecha, hecha a medida para un cliente con una larga trayectoria en nuestra tienda</p>
                                 </div>
                             </div>
                         </div>
@@ -109,13 +111,13 @@
                 </div>
                 <!-- Project Two Row-->
                 <div class="row gx-0 justify-content-center">
-                    <div class="col-lg-6"><img class="img-fluid" src={% static "assets/img/demo-image-02.jpg" %} alt="..." /></div>
+                    <div class="col-lg-6"><img class="img-fluid" src={% static "assets/img/Pc-Gamer-de-entrada.jpg" %} alt="..." /></div>
                     <div class="col-lg-6 order-lg-first">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
                                 <div class="project-text w-100 my-auto text-center text-lg-right">
-                                    <h4 class="text-white">Mountains</h4>
-                                    <p class="mb-0 text-white-50">Another example of a project with its respective description. These sections work well responsively as well!</p>
+                                    <h4 class="text-white">Alien</h4>
+                                    <p class="mb-0 text-white-50">ALIEN es la mejor pcgamer de entrada que tenemos. Equipada con los mejores componentes de entrada en el mundo gaming del mercado</p>
                                 </div>
                             </div>
                         </div>
@@ -129,7 +131,7 @@
                 <div class="row gx-4 gx-lg-5">
                     <div class="col-md-10 col-lg-8 mx-auto text-center">
                         <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
-                        <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
+                        <h2 class="text-white mb-5">Suscribete para recibis las mejores ofertas en componentes y pc armadas por nuestro equipo de profesionales</h2>
                         <!-- * * * * * * * * * * * * * * *-->
                         <!-- * * SB Forms Contact Form * *-->
                         <!-- * * * * * * * * * * * * * * *-->
@@ -141,7 +143,7 @@
                             <!-- Email address input-->
                             <div class="row input-group-newsletter">
                                 <div class="col"><input class="form-control" id="emailAddress" type="email" placeholder="Enter email address..." aria-label="Enter email address..." data-sb-validations="required,email" /></div>
-                                <div class="col-auto"><button class="btn btn-primary disabled" id="submitButton" type="submit">Notify Me!</button></div>
+                                <div class="col-auto"><button class="btn btn-primary disabled" id="submitButton" type="submit">Notificame las ofertas</button></div>
                             </div>
                             <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:required">An email is required.</div>
                             <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:email">Email is not valid.</div>

@@ -1,0 +1,21 @@
+{% extends "Padre.html" %}
+
+{% block title_head %}
+Arma tu Pc Perfecta
+{% endblock title_head %}
+
+{% block h1_header %}
+HXZ GAMERS
+{% endblock h1_header %}
+
+{% block h2_header %}
+Nuestras Pc Armadas
+{% endblock h2_header %}
+
+{% block main %}
+<ul>
+    {% for PcArmada in PcArmadas %}
+    <li>{{PcArmada}}</li>
+    {% endfor %}
+</ul>
+{% endblock main %}

@@ -3,5 +3,6 @@ from AppsDePag import views
 
 urlpatterns = [
     path("", views.inicio, name="inicio"),
-    path("crear/mother/", views.creacion_de_mother_v2, name="crearV2")
+    path("arma/tu/pc", views.ArmarPc, name="ArmarPc"),
+    path("pc/armadas", views.PcArmadas, name="Pc Armadas")
 ]
