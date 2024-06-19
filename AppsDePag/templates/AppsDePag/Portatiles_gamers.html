@@ -1,0 +1,33 @@
+{% extends "Padre.html" %}
+
+
+{% comment %} TEMPLATE DEL ARMADO DE PC {% endcomment %}
+
+{% block title_head %}
+Arma tu Pc Perfecta
+{% endblock title_head %}
+
+{% block h1_header %}
+HXZ GAMERS
+{% endblock h1_header %}
+
+{% block h2_header %}
+Portatiles Gamers
+{% endblock h2_header %}
+
+{% block main %}
+
+<form action={% url "Portatiles Gamers" %} method="POST">
+    {% csrf_token %}
+
+    {{formulario}}
+
+    <input type="submit" value="Enviar">
+    
+</form>
+
+
+
+
+
+{% endblock main %}

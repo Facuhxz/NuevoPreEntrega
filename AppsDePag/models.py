@@ -20,3 +20,11 @@ class PcArmada(models.Model):
     
     def __str__(self):
         return f"PC GAMER {self.mother} {self.ram} {self.procesador} {self.placa_de_video} {self.fuente_de_poder} {self.gabinete}"
+
+# MODEL ULTILIZADO EN LA PAG FINAL
+class PortatilGamer(models.Model):
+    marca = models.CharField(max_length=25)
+    modelo = models.CharField(max_length=25)
+    
+    def __str__(self):
+        return f"Portatil Gamer {self.marca} {self.modelo}"

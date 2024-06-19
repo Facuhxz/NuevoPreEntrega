@@ -9,13 +9,10 @@ class FormularioPc(forms.Form):
     placa_de_video = forms.CharField(max_length=50)
     fuente_de_poder = forms.CharField(max_length=50)
     gabinete = forms.CharField(max_length=50)
-    
-   
-        
-    
-    # def __str__(self):
-    #    return f"Armaste tu pc {self.mother} {self.ram} {self.procesador} {self.placa_de_video} {self.fuente_de_poder} {self.gabinete}"
-
-
+ 
+# FORMULARIO PARA PORTATILES
+class FormularioPortatiles(forms.Form):
+    marca = forms.CharField(max_length=50)
+    modelo = forms.CharField(max_length=50)
     
     
