@@ -16,9 +16,24 @@ Nuestras Pc Armadas
 {% endblock h2_header %}
 
 {% block main %}
+{% if PcArmadas %}
+<form action={% url "Pc Armadas" %} method="get">
+    {{formulario}}
+    <input type="submit" value="Buscar">
+</form>
+
 <ul>
     {% for PcArmada in PcArmadas %}
-    <li>{{PcArmada}}</li>
+    <li>{{PcArmada}} |
+        <a href={% url "EliminarPc" PcArmada.id%}>EliminarPc</a> |
+        <a href={% url "EditarPc" PcArmada.id%}>Editar Pc</a> |
+        <a href={% url "VerPc" PcArmada.id%}>Ver Pc</a>
+    </li>
     {% endfor %}
 </ul>
+{% else %}
+<p>No hay PcArmadas</p>
+{% endif %}
 {% endblock main %}
+
+

@@ -1,0 +1,28 @@
+
+{% extends "Padre.html" %}
+
+{% block title_head %}
+HXZ Gamers
+{% endblock title_head %}
+
+
+{% block h1_header %}
+HXZ Gamers
+{% endblock h1_header %}
+
+{% block h2_header %}
+{{pcarmada}}
+{% endblock h2_header %}
+
+{% block main %}
+<ul>
+    <li>Pc: {{pc.pc}} </li>
+    <li>Mother: {{pc.mother}} </li>
+    <li>Ram: {{pc.ram}} </li>
+    <li>Procesador: {{pc.procesador}} </li>
+    <li>Placa De Video: {{pc.placa_de_video}} </li>
+    <li>Fuente De Poder: {{pc.fuente_de_poder}} </li>
+    <li>Gabinete: {{pc.gabinete}} </li>   
+</ul>
+{% endblock main %}
+

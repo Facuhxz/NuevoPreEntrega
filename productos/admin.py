@@ -1,7 +1,6 @@
 from django.contrib import admin
-from .models import PcArmada
-
+from .models import Portatil
 
 # Register your models here.
 
-admin.site.register(PcArmada)
+admin.site.register(Portatil)

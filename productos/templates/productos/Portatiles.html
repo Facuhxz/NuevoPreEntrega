@@ -1,0 +1,36 @@
+{% extends "Padre.html" %}
+
+
+{% comment %} TEMPLATE UTILIZADO PARA CREAR LA LISTA DE PC ARMADAS {% endcomment %}
+
+{% block title_head %}
+Arma tu Pc Perfecta
+{% endblock title_head %}
+
+{% block h1_header %}
+HXZ GAMERS
+{% endblock h1_header %}
+
+{% block h2_header %}
+Nuestros Portatiles
+{% endblock h2_header %}
+
+{% block main %}
+
+<a href={% url "CrearPortatil" %}>Crear Portatil</a>
+
+{% if Portatiles %}
+    <ul>
+        {% for Portatil in Portatiles %}
+        <li>{{Portatil}} |
+            {% comment %} <a href={% url "EliminarPortatil" Portatil.id%}>Eliminar Portatil</a> |
+            {% comment %} <a href={% url "EditarPortatil" Portatil.id%}>Editar Portatil</a> | {% endcomment %}
+            <a href={% url "VerPortatil" Portatil.id%}>Ver Portatil</a> 
+        </li>
+    
+        {% endfor %}
+    </ul>
+{% else %}
+<p>No hay Portatiles</p>
+{% endif %}
+{% endblock main %}

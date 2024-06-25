@@ -11,6 +11,7 @@ from django.db import models
         
 # MODEL UTILIZADO PARA LA PAG FINAL
 class PcArmada(models.Model):
+    pc = models.CharField(max_length=10, default="")
     mother = models.CharField(max_length=50)
     ram = models.CharField(max_length=50)
     procesador = models.CharField(max_length=50)
@@ -19,12 +20,4 @@ class PcArmada(models.Model):
     gabinete = models.CharField(max_length=50)
     
     def __str__(self):
-        return f"PC GAMER {self.mother} {self.ram} {self.procesador} {self.placa_de_video} {self.fuente_de_poder} {self.gabinete}"
-
-# MODEL ULTILIZADO EN LA PAG FINAL
-class PortatilGamer(models.Model):
-    marca = models.CharField(max_length=25)
-    modelo = models.CharField(max_length=25)
-    
-    def __str__(self):
-        return f"Portatil Gamer {self.marca} {self.modelo}"
+        return f"PC GAMER {self.pc} {self.mother} {self.ram} {self.procesador} {self.placa_de_video} {self.fuente_de_poder} {self.gabinete}"

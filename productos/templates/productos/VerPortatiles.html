@@ -1,0 +1,23 @@
+
+{% extends "Padre.html" %}
+
+{% block title_head %}
+HXZ Gamers
+{% endblock title_head %}
+
+
+{% block h1_header %}
+HXZ Gamers
+{% endblock h1_header %}
+
+{% block h2_header %}
+{{portatil}}
+{% endblock h2_header %}
+
+{% block main %}
+<ul>
+    <li>Marca: {{portatil.marca}} </li>
+    <li>Modelo: {{portatil.modelo}} </li>
+    <li>Especificaciones: {{portatil.spects}} </li> 
+</ul>
+{% endblock main %}
