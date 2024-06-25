@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic.list import ListView
-from django.views.generic.edit import CreateView, UpdateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic.detail import DetailView
 from .models import Portatil
 from django.urls import reverse_lazy
@@ -19,8 +19,16 @@ class CrearPortatil(CreateView):
     
     
 class EditarPortatil(UpdateView):
-    ...
+    model = Portatil
+    template_name = "productos/EditarPortatiles.html"
+    success_url = reverse_lazy("Portatiles")
+    fields = ["marca", "modelo", "spects"]
 
 class VerPortatil(DetailView):
     model = Portatil
-    template_name = "productos/VerPortatiles.html"    
+    template_name = "productos/VerPortatiles.html"   
+    
+class EliminarPortatil(DeleteView):
+    model = Portatil
+    template_name = "productos/EliminarPortatiles.html"   
+    success_url = reverse_lazy("Portatiles")

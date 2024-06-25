@@ -15,13 +15,13 @@ HXZ GAMERS
 Nuestras Pc Armadas
 {% endblock h2_header %}
 
+
+{% comment %} {% if PcArmadas %} {% endcomment %}
 {% block main %}
-{% if PcArmadas %}
 <form action={% url "Pc Armadas" %} method="get">
     {{formulario}}
     <input type="submit" value="Buscar">
 </form>
-
 <ul>
     {% for PcArmada in PcArmadas %}
     <li>{{PcArmada}} |
@@ -31,9 +31,9 @@ Nuestras Pc Armadas
     </li>
     {% endfor %}
 </ul>
-{% else %}
-<p>No hay PcArmadas</p>
-{% endif %}
 {% endblock main %}
 
+{% comment %} {% else %}
+<p>No hay PcArmadas</p>
+{% comment %} {% endif %}  {% endcomment %}
 

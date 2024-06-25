@@ -23,8 +23,8 @@ Nuestros Portatiles
     <ul>
         {% for Portatil in Portatiles %}
         <li>{{Portatil}} |
-            {% comment %} <a href={% url "EliminarPortatil" Portatil.id%}>Eliminar Portatil</a> |
-            {% comment %} <a href={% url "EditarPortatil" Portatil.id%}>Editar Portatil</a> | {% endcomment %}
+            <a href={% url "EliminarPortatil" Portatil.id%}>Eliminar Portatil</a> |
+            <a href={% url "EditarPortatil" Portatil.id%}>Editar Portatil</a> | 
             <a href={% url "VerPortatil" Portatil.id%}>Ver Portatil</a> 
         </li>
     

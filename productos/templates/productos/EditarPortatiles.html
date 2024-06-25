@@ -12,17 +12,17 @@ HXZ GAMERS
 {% endblock h1_header %}
 
 {% block h2_header %}
-Crea tu Portatil ideal
+Edita nuestros Portaties disponibles y crea el ideal para vos
 {% endblock h2_header %}
 
 {% block main %}
 
-<form action={% url "CrearPortatil" %} method="POST">
+<form action={% url "EditarPortatil" portatil.id %} method="POST">
     {% csrf_token %}
 
     {{form}}
 
-    <input type="submit" value="Crear">
+    <input type="submit" value="Editar">
 
 </form>
 

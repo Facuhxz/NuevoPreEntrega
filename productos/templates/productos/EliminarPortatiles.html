@@ -12,17 +12,18 @@ HXZ GAMERS
 {% endblock h1_header %}
 
 {% block h2_header %}
-Crea tu Portatil ideal
+Nuestros Portatiles
 {% endblock h2_header %}
 
 {% block main %}
 
-<form action={% url "CrearPortatil" %} method="POST">
+<form action={% url "EliminarPortatil" portatil.id %} method="POST">
     {% csrf_token %}
+    <p>
+        Desea eliminar el portatil {{portatil}}?
+    </p>
 
-    {{form}}
-
-    <input type="submit" value="Crear">
+    <input type="submit" value="Confirmar">
 
 </form>
 
