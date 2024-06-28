@@ -1,0 +1,32 @@
+{% extends "Padre.html" %}
+
+
+{% comment %} TEMPLATE DEL ARMADO DE PC {% endcomment %}
+
+{% block title_head %}
+HXZ GAMERS | Editar Usuario
+{% endblock title_head %}
+
+{% block h1_header %}
+HXZ GAMERS
+{% endblock h1_header %}
+
+{% block h2_header %}
+Edita tu cuenta
+{% endblock h2_header %}
+
+{% block main %}
+
+<form action={% url "EditarPerfil" %} method="POST">
+    {% csrf_token %}
+
+    {{formulario}}
+
+    <input type="submit" value="Editar">
+
+</form>
+
+<a href={% url "CambiarPass" %}>Cambiar Contraseña</a>
+
+
+{% endblock main %} 

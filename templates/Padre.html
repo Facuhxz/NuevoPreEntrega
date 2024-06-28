@@ -37,7 +37,7 @@
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                         {% if request.user.is_authenticated %}
-                        <li class="nav-item"><a class="nav-link" href="#">{{request.user.username}}</a></li> 
+                        <li class="nav-item"><a class="nav-link" href={% url "EditarPerfil" %}>{{request.user.username}}</a></li> 
                             <form action={% url "logout" %} method="POST">
                                 {% csrf_token %}
                                 <input type="submit" class="btn btn-secondary" value="Cerrar sesion">

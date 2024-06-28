@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 
 from AppsDePag.models import PcArmada
 from AppsDePag.forms import FormularioPc, BuscarPc, EditarPc
+from django.contrib.auth.decorators import login_required
 
 
 # ESTE CODIGO UTILIZAMOS PARA IR A NUESTRO INICIO
@@ -37,12 +38,14 @@ def PcArmadas(request):
     
     return render(request, "AppsDePag/PcsArmadas.html", {"PcArmadas": PcArmadas, "formulario": formulario})
 
+@login_required
 def EliminarPc(request, id):
     pc = PcArmada.objects.get(id=id)
     pc.delete()
     
     return redirect(PcArmadas)
 
+@login_required
 def EditarPC(request, id):
     pc = PcArmada.objects.get(id=id)
     formulario = EditarPc(initial={"pc": pc.pc, "mother": pc.mother, "ram": pc.ram, "procesador": pc.procesador,

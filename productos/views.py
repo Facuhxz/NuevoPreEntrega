@@ -4,6 +4,7 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic.detail import DetailView
 from .models import Portatil
 from django.urls import reverse_lazy
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 class Portatiles(ListView):
@@ -18,7 +19,7 @@ class CrearPortatil(CreateView):
     fields = ["marca", "modelo", "spects"]
     
     
-class EditarPortatil(UpdateView):
+class EditarPortatil(LoginRequiredMixin, UpdateView):
     model = Portatil
     template_name = "productos/EditarPortatiles.html"
     success_url = reverse_lazy("Portatiles")
@@ -28,7 +29,7 @@ class VerPortatil(DetailView):
     model = Portatil
     template_name = "productos/VerPortatiles.html"   
     
-class EliminarPortatil(DeleteView):
+class EliminarPortatil(LoginRequiredMixin, DeleteView):
     model = Portatil
     template_name = "productos/EliminarPortatiles.html"   
     success_url = reverse_lazy("Portatiles")

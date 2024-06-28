@@ -1,0 +1,30 @@
+{% extends "Padre.html" %}
+
+
+{% comment %} TEMPLATE DEL ARMADO DE PC {% endcomment %}
+
+{% block title_head %}
+HXZ GAMERS | Cambiar Contraseña
+{% endblock title_head %}
+
+{% block h1_header %}
+HXZ GAMERS
+{% endblock h1_header %}
+
+{% block h2_header %}
+Cambia tu Contraseña
+{% endblock h2_header %}
+
+{% block main %}
+
+<form action={% url "CambiarPass" %} method="POST">
+    {% csrf_token %}
+
+    {{form}}
+
+    <input type="submit" value="Cambiar">
+
+</form>
+
+
+{% endblock main %} 
