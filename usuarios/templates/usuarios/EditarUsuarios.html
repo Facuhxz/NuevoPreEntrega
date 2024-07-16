@@ -17,7 +17,7 @@ Edita tu cuenta
 
 {% block main %}
 
-<form action={% url "EditarPerfil" %} method="POST">
+<form action={% url "EditarPerfil" %} method="POST" enctype="multipart/form-data">
     {% csrf_token %}
 
     {{formulario}}
